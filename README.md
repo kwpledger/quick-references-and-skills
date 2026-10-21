@@ -1,5 +1,7 @@
 Most recent date for each file is:
 * Basic Folder Structure for Unity Projects: 2026-09-17
-* Git Quick Reference: 2026-10-09
+* Git Quick Reference: 2026-10-21
 * Terminal Quick Reference: 2026-09-17
 * Unity Quick Reference: 2026-09-17
+
+The `skills/` folder contents are undated.
