@@ -4,7 +4,7 @@
 
 **Verified (and occasionally updated) by:** Claude
 
-**Last updated:** October 9, 2026
+**Last updated:** October 21, 2026
 
 Git, GitHub, and GitLab — ordered by how often it actually gets used: daily workflow first, emergencies last.
 
@@ -71,7 +71,38 @@ Unity-specific pre-commit settings live in `_UnityQuickReference.md` §8.
 
 ---
 
-## 3. Investigating
+## 3. Pinning a Version (Tags)
+
+A tag is a permanent label on one commit — "this is v0.1.1." Annotated tags (`-a`) carry a date, author, and message, so use them for versions.
+
+⚠️ `git push` does **not** send tags. Pushing the tag is its own step (#6).
+⚠️ Once a tag is pushed, treat it as permanent. Get the commit right *before* tagging.
+
+| \# | Command | Does |
+| --- | --- | --- |
+| 1 | `git pull` | Make sure you're tagging the latest |
+| 2 | `git status` | Check nothing that belongs in this version is uncommitted |
+| 3 | `git add .` → `git commit -m "..."` → `git push` | Commit and push anything that is |
+| 4 | `git log --oneline -5` | Confirm the top commit is the one to tag |
+| 5 | `git tag -a vX.Y.Z -m "vX.Y.Z: what's in it"` | Create the tag on the current commit |
+| 6 | `git push origin vX.Y.Z` | Send the tag to GitLab/GitHub |
+| 7 | GitLab: **Code → Tags** | Verify it's there (optional: **Create release**) |
+
+### Related
+
+| Command | Does |
+| --- | --- |
+| `git tag` | List all tags |
+| `git show vX.Y.Z` | Show the tag's message and the commit it points to |
+| `git tag -a vX.Y.Z <hash> -m "..."` | Tag an older commit instead of the current one |
+| `git tag -d vX.Y.Z` | Delete a tag locally (only safe if it was never pushed) |
+| `git push origin --delete vX.Y.Z` | ⚠️ Delete a pushed tag — only if nobody has pulled it yet |
+
+*First done 10/21/2026 — conduct-of-operations-fluid-simulation, v0.1.1.*
+
+---
+
+## 4. Investigating
 
 | Command | Shows |
 | --- | --- |
@@ -85,7 +116,7 @@ Unity-specific pre-commit settings live in `_UnityQuickReference.md` §8.
 
 ---
 
-## 4. Branching & Switching
+## 5. Branching & Switching
 
 | Command | Does |
 | --- | --- |
@@ -96,11 +127,11 @@ Unity-specific pre-commit settings live in `_UnityQuickReference.md` §8.
 | `git merge <name>` | Merge a branch into the current branch |
 | `git branch -vv` | List branches **with** tracking info and how far behind each is |
 | `git branch -d <name>` | Delete a merged branch (refuses if it has unmerged work) |
-| `git push origin --delete <name>` | Delete the branch on GitHub too |
+| `git push origin --delete <name>` | Delete the branch on GitHub/GitLab too |
 
 ---
 
-## 5. Reverting & Restoring
+## 6. Reverting & Restoring
 
 | Command | Does |
 | --- | --- |
@@ -112,7 +143,7 @@ Unity-specific pre-commit settings live in `_UnityQuickReference.md` §8.
 
 ---
 
-## 6. LLNL GitLab Access
+## 7. LLNL GitLab Access
 
 Remote: `sd-git.llnl.gov` — **internal only.**
 
@@ -138,7 +169,7 @@ Local commits work fine without VPN. Verify the remote with `git remote -v`.
 
 ---
 
-## 7. Home Projects Using Two Computers for One Project.
+## 8. Home Projects Using Two Computers for One Project.
 
 To start a new project (local on Machine 1) and continue it as local on the Machine 2:
 
@@ -173,7 +204,7 @@ To start a new project (local on Machine 1) and continue it as local on the Mach
 
 ---
 
-## 8. Troubleshooting
+## 9. Troubleshooting
 
 ### "fatal: not a git repository"
 
@@ -196,6 +227,7 @@ To start a new project (local on Machine 1) and continue it as local on the Mach
 - `git checkout <hash>` with **no filename** detaches HEAD — the whole project jumps to that commit.
     - To revert one file instead: `git restore --source=<hash> <file>`
     - To escape detached HEAD: `git switch main`, then `git restore .`
+- `remote ref does not exist` on a branch delete means the host already removed it at merge.
 
 ### "GH013: Repository rule violations found for refs/heads/main"
 
@@ -280,7 +312,7 @@ Also worth setting once: `git config --global fetch.prune true`. A deleted remot
 
 ---
 
-## 9. In Case of Dire Emergency
+## 10. In Case of Dire Emergency
 
 | Command | Does |
 | --- | --- |
