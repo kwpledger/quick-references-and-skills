@@ -4,7 +4,7 @@
 
 **Verified (and occasionally updated) by:** Claude
 
-**Last updated:** October 21, 2026
+**Last updated:** October 23, 2026
 
 Git, GitHub, and GitLab — ordered by how often it actually gets used: daily workflow first, emergencies last.
 
@@ -78,25 +78,29 @@ A tag is a permanent label on one commit — "this is v0.1.1." Annotated tags (`
 ⚠️ `git push` does **not** send tags. Pushing the tag is its own step (#6).
 ⚠️ Once a tag is pushed, treat it as permanent. Get the commit right *before* tagging.
 
+### Pinning the Version to the Next Commit
+
 | \# | Command | Does |
 | --- | --- | --- |
 | 1 | `git pull` | Make sure you're tagging the latest |
 | 2 | `git status` | Check nothing that belongs in this version is uncommitted |
 | 3 | `git add .` → `git commit -m "..."` → `git push` | Commit and push anything that is |
 | 4 | `git log --oneline -5` | Confirm the top commit is the one to tag |
-| 5 | `git tag -a vX.Y.Z -m "vX.Y.Z: what's in it"` | Create the tag on the current commit |
+| 5\* | `git tag -a vX.Y.Z -m "vX.Y.Z: what's in it"` | Create the tag on the current commit |
 | 6 | `git push origin vX.Y.Z` | Send the tag to GitLab/GitHub |
 | 7 | GitLab: **Code → Tags** | Verify it's there (optional: **Create release**) |
 
+**Note:** At Step 5\*, of the version bump will not be pinned to the commit you just pushed in Step 3, then you need to use the `git tag` in Step 3\* below in "Related".
+
 ### Related
 
-| Command | Does |
-| --- | --- |
-| `git tag` | List all tags |
-| `git show vX.Y.Z` | Show the tag's message and the commit it points to |
-| `git tag -a vX.Y.Z <hash> -m "..."` | Tag an older commit instead of the current one |
-| `git tag -d vX.Y.Z` | Delete a tag locally (only safe if it was never pushed) |
-| `git push origin --delete vX.Y.Z` | ⚠️ Delete a pushed tag — only if nobody has pulled it yet |
+| \# | Command | Does |
+| --- | --- | --- |
+| 1 | `git tag` | List all tags |
+| 2 | `git show vX.Y.Z` | Show the tag's message and the commit it points to |
+| 3\* | `git tag -a vX.Y.Z <hash> -m "..."` | Tag an older commit instead of the current one |
+| 4 | `git tag -d vX.Y.Z` | Delete a tag locally (only safe if it was never pushed) |
+| 5 | `git push origin --delete vX.Y.Z` | ⚠️ Delete a pushed tag — only if nobody has pulled it yet |
 
 *First done 10/21/2026 — conduct-of-operations-fluid-simulation, v0.1.1.*
 
