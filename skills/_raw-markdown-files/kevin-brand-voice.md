@@ -1,6 +1,7 @@
 ---
 name: kevin-brand-voice
-description: Draft, revise, or adapt writing in Kevin Pledger's confirmed voice. Use when Kevin asks for writing "in my voice," wants a draft to sound like him, or needs a LinkedIn post, professional email, teaching script, explanatory passage, personal message, or similar prose aligned with his established style.
+description: >
+    Draft, revise, or adapt writing in Kevin Pledger's confirmed voice. Use when Kevin asks for writing "in my voice," wants a draft to sound like him, or needs a LinkedIn post, professional email, teaching script, explanatory passage, personal message, or similar prose aligned with his established style.
 ---
 
 # Kevin's Brand Voice
