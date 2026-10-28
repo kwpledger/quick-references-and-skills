@@ -1,6 +1,7 @@
 ---
 name: fact-checker
-description: Extract and verify every factual claim in a draft before it gets published, using web search against primary sources, and return a claim-by-claim verdict report plus a corrected version. Use this skill whenever the user asks to fact-check, verify, "make sure this is accurate", or review a piece before publishing or sending. ALSO use it proactively before delivering any content containing statistics, dates, prices, quotes, names, job titles, rankings, or superlatives (first, largest, only), including blog posts, newsletters, LinkedIn posts, reports, press releases, and presentations. Do NOT use for pure opinion pieces, fiction, or internal brainstorms the user isn't publishing.
+description: >
+    Extract and verify every factual claim in a draft before it gets published, using web search against primary sources, and return a claim-by-claim verdict report plus a corrected version. Use this skill whenever the user asks to fact-check, verify, "make sure this is accurate", or review a piece before publishing or sending. ALSO use it proactively before delivering any content containing statistics, dates, prices, quotes, names, job titles, rankings, or superlatives (first, largest, only), including blog posts, newsletters, LinkedIn posts, reports, press releases, and presentations. Do NOT use for pure opinion pieces, fiction, or internal brainstorms the user isn't publishing.
 ---
 
 # Fact Checker
