@@ -1,6 +1,7 @@
 ---
 name: infographic-builder
-description: Turns textual content into a single, polished infographic image (1080×1350 px PNG) suitable for social feeds, reports, and educational sharing. Use whenever the user wants an "infographic," a "visual summary," a "carousel slide," a "poster," or asks to make text "shareable"/"visual" as an image they can post or download. Triggers on phrases like "make this an infographic," "turn this into a graphic," "visualize this for LinkedIn/Instagram," "one-pager I can post." Do NOT use for editable slide.
+description: >
+    Turns textual content into a single, polished infographic image (1080×1350 px PNG) suitable for social feeds, reports, and educational sharing. Use whenever the user wants an "infographic," a "visual summary," a "carousel slide," a "poster," or asks to make text "shareable"/"visual" as an image they can post or download. Triggers on phrases like "make this an infographic," "turn this into a graphic," "visualize this for LinkedIn/Instagram," "one-pager I can post." Do NOT use for editable slide.
 ---
 
 # Infographic Builder
