@@ -1,6 +1,7 @@
 ---
 name: analyze-video
-description: Interactive, step-by-step review of a video's presentation (visuals, aesthetics, and consistency with the narration) using yt-dlp and ffmpeg on Kevin's Windows computer, with frames read back as labeled contact sheets. Use when Kevin types /analyze-video or asks to start the analyze-video skill, or asks to review a YouTube video or one of his own videos for visuals, consistency, or pacing. Run one step at a time and wait for Kevin's confirmation before the next step.
+description: >
+    Interactive, step-by-step review of a video's presentation (visuals, aesthetics, and consistency with the narration) using yt-dlp and ffmpeg on Kevin's Windows computer, with frames read back as labeled contact sheets. Use when Kevin types /analyze-video or asks to start the analyze-video skill, or asks to review a YouTube video or one of his own videos for visuals, consistency, or pacing. Run one step at a time and wait for Kevin's confirmation before the next step.
 ---
 
 # Analyze video, clean titles (interactive)
