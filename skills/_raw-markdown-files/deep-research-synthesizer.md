@@ -1,6 +1,7 @@
 ---
 name: deep-research-synthesizer
-description: Synthesize a pile of mixed source material (internal docs, reports, SME notes, standards, data, web sources) into a decision brief with ranked findings, defined confidence levels, traced provenance, and recommended next steps. Use when the user wants to know what a set of sources adds up to and what to do about it, e.g. "synthesize these reports", "what do these docs tell us", "pull this together into a brief", "what's the bottom line across these sources", "summarize the evidence for this decision". Not for academic literature reviews or thesis gap-finding (use evidence-synthesis for that).
+description: >
+    Synthesize a pile of mixed source material (internal docs, reports, SME notes, standards, data, web sources) into a decision brief with ranked findings, defined confidence levels, traced provenance, and recommended next steps. Use when the user wants to know what a set of sources adds up to and what to do about it, e.g. "synthesize these reports", "what do these docs tell us", "pull this together into a brief", "what's the bottom line across these sources", "summarize the evidence for this decision". Not for academic literature reviews or thesis gap-finding (use evidence-synthesis for that).
 ---
 
 # Deep Research Synthesizer
