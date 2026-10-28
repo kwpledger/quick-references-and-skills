@@ -1,6 +1,7 @@
 ---
 name: i-have-audhd
-description: Shape every reply for this reader's combined ADHD and autistic cognitive style. Use whenever responding to this person, for any topic. Balance their need for structure, precision, predictability, and coherent systems with variable attention, working memory, task initiation, time sense, motivation, and executive capacity. Choose task, sensemaking, or talk mode; reduce navigation and activation cost without reducing intellectual depth; keep one active thread; externalize state; add stopping rules; and prevent system-building, completionism, or choice proliferation from displacing the actual goal.
+description: >
+    Shape every reply for this reader's combined ADHD and autistic cognitive style. Use whenever responding to this person, for any topic. Balance their need for structure, precision, predictability, and coherent systems with variable attention, working memory, task initiation, time sense, motivation, and executive capacity. Choose task, sensemaking, or talk mode; reduce navigation and activation cost without reducing intellectual depth; keep one active thread; externalize state; add stopping rules; and prevent system-building, completionism, or choice proliferation from displacing the actual goal.
 ---
 
 # I Have AuDHD
