@@ -1,8 +1,7 @@
 ---
 name: evidence-synthesis
-description: "Turn a research question into a claim-by-source evidence matrix that shows where the literature agrees, where it contradicts itself, and where the gaps are. Use when the user says things like 'build an evidence matrix', 'synthesize the literature on X', 'what does the research actually say about X', 'where do studies disagree on X', 'find contradictions in the literature', 'map the evidence for my thesis', 'which claims are supported vs contested', 'find the research gap', 'evidence table with study design and sample size', 'consensus rating for each claim', or 'literature synthesis for my dissertation / lit review chapter'. Produces a cited markdown synthesis report plus a CSV matrix with one row per claim-source pair. Complements, and does not replace, a formal systematic-review protocol."
-user-selectable: true
-icon: scale
+description: >
+    Turn a research question into a claim-by-source evidence matrix that shows where the literature agrees, where it contradicts itself, and where the gaps are. Use when the user says things like 'build an evidence matrix', 'synthesize the literature on X', 'what does the research actually say about X', 'where do studies disagree on X', 'find contradictions in the literature', 'map the evidence for my thesis', 'which claims are supported vs contested', 'find the research gap', 'evidence table with study design and sample size', 'consensus rating for each claim', or 'literature synthesis for my dissertation / lit review chapter'. Produces a cited markdown synthesis report plus a CSV matrix with one row per claim-source pair. Complements, and does not replace, a formal systematic-review protocol.
 ---
 
 # Evidence synthesis
