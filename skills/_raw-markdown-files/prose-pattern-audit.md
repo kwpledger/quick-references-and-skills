@@ -1,6 +1,7 @@
 ---
 name: prose-pattern-audit
-description: Draft, revise, or review natural prose while detecting generic, formulaic, or synthetic-sounding rhetorical patterns without flattening the writer's voice. Use for any substantive prose—including documents, reports, articles, posts, emails, scripts, explanations, proposals, and personal writing—whether creating a draft or polishing an existing one. Use alongside a separate personal or brand voice skill when applicable.
+description: >
+    Draft, revise, or review natural prose while detecting generic, formulaic, or synthetic-sounding rhetorical patterns without flattening the writer's voice. Use for any substantive prose—including documents, reports, articles, posts, emails, scripts, explanations, proposals, and personal writing—whether creating a draft or polishing an existing one. Use alongside a separate personal or brand voice skill when applicable.
 ---
 
 # Prose Pattern Audit
