@@ -1,6 +1,7 @@
 ---
 name: red-pen
-description: Never show the user a first draft. Run every writing task through a self-critique loop — draft, attack the draft as the harshest reviewer in the room, rewrite, and repeat until a full review pass finds zero flags — then return only the final plus a change log. Use for any writing the user actually cares about: emails, LinkedIn posts, newsletters, docs, announcements, client messages. Trigger whenever the user says "run the loop", "self-critique this", "make it bulletproof", "don't give me a first draft", "be brutal", or hands over a task where quality matters more than speed. This is a single-agent loop; for the three-agent version use the-team.
+description: >
+    Never show the user a first draft. Run every writing task through a self-critique loop — draft, attack the draft as the harshest reviewer in the room, rewrite, and repeat until a full review pass finds zero flags — then return only the final plus a change log. Use for any writing the user actually cares about: emails, LinkedIn posts, newsletters, docs, announcements, client messages. Trigger whenever the user says "run the loop", "self-critique this", "make it bulletproof", "don't give me a first draft", "be brutal", or hands over a task where quality matters more than speed. This is a single-agent loop; for the three-agent version use the-team.
 ---
 
 # Red Pen
