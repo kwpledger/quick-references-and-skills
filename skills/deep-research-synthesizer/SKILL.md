@@ -1,6 +1,7 @@
 ---
 name: deep-research-synthesizer
-description: Synthesizes insights from large datasets and source material, filters irrelevant data, identifies patterns, evaluates source quality, and produces actionable, well-cited summaries.
+description: >
+    Synthesizes insights from large datasets and source material, filters irrelevant data, identifies patterns, evaluates source quality, and produces actionable, well-cited summaries.
 ---
 
 # Deep Research Synthesizer
