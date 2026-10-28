@@ -1,6 +1,7 @@
 ---
 name: new-project-triage
-description: Runs a buy-vs-build-vs-skip check before any architecture talk whenever Kevin proposes building something new — an app, tool, MCP server, script, automation, integration, or workflow. Trigger on phrases like "I'm thinking about building," "would it be feasible to," "how hard would it be to make," "exploratory," "I have an idea for," or any time Kevin describes a problem and then floats a build as the solution — even if he doesn't ask for an evaluation, and even if the question is framed as purely technical. Feasibility is never the real question; opportunity cost is. Use this before answering any "how would I build X" question about a new personal project.
+description: >
+    Runs a buy-vs-build-vs-skip check before any architecture talk whenever Kevin proposes building something new — an app, tool, MCP server, script, automation, integration, or workflow. Trigger on phrases like "I'm thinking about building," "would it be feasible to," "how hard would it be to make," "exploratory," "I have an idea for," or any time Kevin describes a problem and then floats a build as the solution — even if he doesn't ask for an evaluation, and even if the question is framed as purely technical. Feasibility is never the real question; opportunity cost is. Use this before answering any "how would I build X" question about a new personal project.
 ---
 
 # New Project Triage
