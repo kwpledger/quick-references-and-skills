@@ -1,6 +1,7 @@
 ---
 name: install-check
-description: Audit a skill file, a plugin or an MCP connector BEFORE installing it. Reports every domain it points to, every command it wants you to run, everything it can reach, everything it sends out, and who wrote it. Returns a verdict with the exact lines to look at. Trigger on /install-check or "is this skill safe to install".
+description: >
+    Audit a skill file, a plugin or an MCP connector BEFORE installing it. Reports every domain it points to, every command it wants you to run, everything it can reach, everything it sends out, and who wrote it. Returns a verdict with the exact lines to look at. Trigger on /install-check or "is this skill safe to install".
 ---
 
 # /install-check: read it before you run it
