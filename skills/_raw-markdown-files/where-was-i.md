@@ -1,6 +1,7 @@
 ---
 name: where-was-i
-description: Turn the current conversation into a re-entry note the user can open days or weeks later and resume from in minutes: where things stand, why they chose what they chose, what they were about to try, and the exact first action to take on return. Use whenever the user says they will "pick this up later", is stopping for the day or the week, is switching to another project, worries they will lose the thread, wants to save where things stand, or asks for a "handoff", "save point", or summary for themselves. Also offer it proactively when a long working thread is clearly winding down unfinished. Do NOT use for briefing someone else (use brief-a-person), for handing context to another AI session, for setting reminders or tasks, or for summarizing external documents or meetings.
+description: >
+    Turn the current conversation into a re-entry note the user can open days or weeks later and resume from in minutes: where things stand, why they chose what they chose, what they were about to try, and the exact first action to take on return. Use whenever the user says they will "pick this up later", is stopping for the day or the week, is switching to another project, worries they will lose the thread, wants to save where things stand, or asks for a "handoff", "save point", or summary for themselves. Also offer it proactively when a long working thread is clearly winding down unfinished. Do NOT use for briefing someone else (use brief-a-person), for handing context to another AI session, for setting reminders or tasks, or for summarizing external documents or meetings.
 ---
 
 # Where was I
