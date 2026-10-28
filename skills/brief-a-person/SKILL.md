@@ -1,6 +1,7 @@
 ---
 name: brief-a-person
-description: 'Turn this conversation into a brief a human can read cold and act on: what the work is, why it exists, its status, and what is needed from them. Use to brief, hand off, catch someone up, explain work, or write a summary/status update for a specific person, even without the word "brief." Trigger on "explain this to X," "write this up for my supervisor," or "send someone the context." Exclude self-resumption (use where-was-i), AI-session handoffs, and external document or meeting summaries.'
+description: >
+    Turn this conversation into a brief a human can read cold and act on: what the work is, why it exists, its status, and what is needed from them. Use to brief, hand off, catch someone up, explain work, or write a summary/status update for a specific person, even without the word "brief." Trigger on "explain this to X," "write this up for my supervisor," or "send someone the context." Exclude self-resumption (use where-was-i), AI-session handoffs, and external document or meeting summaries.
 ---
 
 # Brief a person
