@@ -1,6 +1,7 @@
 ---
 name: humanizer
-description: Rewrite or draft text so it reads naturally human rather than AI-generated, while preserving the writer's existing voice and the register appropriate to the situation. Remove robotic tone, common AI-giveaway patterns, and formulaic structure without imposing a personality. Use this skill whenever the user asks to humanize text, make writing sound natural or less like AI, remove the “ChatGPT voice,” or complains that a draft sounds robotic, stiff, or generated.
+description: >
+    Rewrite or draft text so it reads naturally human rather than AI-generated, while preserving the writer's existing voice and the register appropriate to the situation. Remove robotic tone, common AI-giveaway patterns, and formulaic structure without imposing a personality. Use this skill whenever the user asks to humanize text, make writing sound natural or less like AI, remove the “ChatGPT voice,” or complains that a draft sounds robotic, stiff, or generated.
 
 ---
 
