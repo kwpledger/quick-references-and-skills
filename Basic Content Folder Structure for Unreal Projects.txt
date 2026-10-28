@@ -1,0 +1,71 @@
+Basic Content Folder Structure for a New Unreal Project
+
+Authored by: Kevin Pledger
+Verified (and occasionally updated) by: Claude
+Last updated: October 28, 2026
+
+Instructions: Set up this folder structure in any new Unreal Project. These will be populated as you build your project, putting assets into reliable locations.
+
+Notes:
+- Unreal's equivalent of Assets is Content. Folders created in File Explorer are fine while they are EMPTY. Once assets are in them, move and rename only in the Content Browser (see Unreal Quick Reference §9).
+- Git does not track empty folders. Unity's folder .meta files hide this; Unreal has no .meta files, so an empty folder disappears on clone. Put an empty .gitkeep file in each one. The Content Browser ignores it.
+- Fab packs install their own top-level folders directly under Content. Leave them where Fab puts them. That is the reason everything of yours lives under _Project.
+- Movies is a magic folder, like StreamingAssets in Unity: media files there get packaged with the build. It must sit at the Content root.
+
+---
+
+Folder PATH listing for volume Windows
+Volume serial number is xxxx-xxxx
+
+D:\UE\<ProjectName>\Content
+├─── _Project
+│    ├─── Animations
+│    ├─── Audio
+│    │    ├─── Music
+│    │    ├─── SFX
+│    │    └─── Voiceover
+│    ├─── Blueprints
+│    │    ├─── Characters
+│    │    ├─── Core
+│    │    ├─── Cutscenes
+│    │    ├─── Environment
+│    │    ├─── Interaction
+│    │    └─── Player
+│    ├─── Data
+│    ├─── Input
+│    ├─── Maps
+│    ├─── Materials
+│    │    ├─── Instances
+│    │    └─── Masters
+│    ├─── Meshes
+│    │    ├─── Architecture
+│    │    ├─── Characters
+│    │    ├─── Cutscenes
+│    │    ├─── Equipment
+│    │    └─── Props
+│    ├─── Sequences
+│    ├─── Textures
+│    ├─── UI
+│    │    ├─── Textures
+│    │    └─── Widgets
+│    └─── VFX
+├─── Developers
+└─── Movies
+
+---
+
+Unity → Unreal folder mapping:
+
+Prefabs + Scripts       → Blueprints (a Blueprint is both)
+ScriptableObjects       → Data (Data Assets, Data Tables)
+Timelines + Signals     → Sequences (Level Sequences; events live inside them)
+Scenes                  → Maps (kept under _Project, not at the root)
+Models                  → Meshes
+Shaders                 → Materials/Masters (Material Instances go in Instances)
+(new)                   → Input (Enhanced Input actions and mapping contexts)
+(new)                   → Textures (Unreal imports textures as separate assets)
+(new)                   → VFX (Niagara systems)
+StreamingAssets / Video → Movies
+Settings/BuildProfiles  → no folder; these live in Config\ outside Content
+ThirdParty              → no folder; Fab content creates its own
+Developers              → optional personal sandbox, one subfolder per person, safe to exclude from builds
