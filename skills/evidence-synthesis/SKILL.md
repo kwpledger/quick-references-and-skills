@@ -1,6 +1,7 @@
 ---
 name: evidence-synthesis
-description: Turn a research question into a claim-by-source evidence matrix showing agreement, contradictions, and gaps. Use for evidence matrices, literature synthesis, research consensus or disagreements, supported vs contested claims, thesis evidence mapping, research gaps, or evidence tables with study design and sample size. Produce a cited Markdown synthesis report and a CSV matrix with one row per claim-source pair. Complements a formal systematic-review protocol; does not replace it.
+description: >
+    Turn a research question into a claim-by-source evidence matrix showing agreement, contradictions, and gaps. Use for evidence matrices, literature synthesis, research consensus or disagreements, supported vs contested claims, thesis evidence mapping, research gaps, or evidence tables with study design and sample size. Produce a cited Markdown synthesis report and a CSV matrix with one row per claim-source pair. Complements a formal systematic-review protocol; does not replace it.
 ---
 
 # Evidence synthesis
