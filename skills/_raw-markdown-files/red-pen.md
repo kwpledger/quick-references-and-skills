@@ -40,9 +40,9 @@ Show the user exactly two things, nothing else:
 
 1. **The final version.** Placed first, with no preamble above it.
 2. **A change log.** One line per round, stating what died that round. For example:
-   - Round 1: cut 3 empty openers, added the real date and owner.
-   - Round 2: killed "It's not X, it's Y" line, replaced vague "soon" with "Friday".
-   - Round 3: added the compliance detail (the one line only they could write); zero flags.
+    - Round 1: cut 3 empty openers, added the real date and owner.
+    - Round 2: killed "It's not X, it's Y" line, replaced vague "soon" with "Friday".
+    - Round 3: added the compliance detail (the one line only they could write); zero flags.
 
 Never explain the loop back to the user in prose. Never ask "would you like me to proceed?" — just run it and deliver.
 
@@ -66,4 +66,4 @@ Tell the model: *run two more rounds, and be more brutal on the workslop test.* 
 
 ## The boundary of this skill
 
-Red Pen is one brain checking itself, in a loop. It is the right tool for most high-stakes writing. When a piece is important enough to want separate specialists — a dedicated fact-checker arguing with a dedicated editor — step up to **the-team**, which runs the same standard across three agents in parallel. For drafting in the user's voice in the first place, run **sound-like-your-posts** before this loop.
+Red Pen is one brain checking itself, in a loop. It is the right tool for most high-stakes writing. When a piece is important enough to want separate specialists — a dedicated fact-checker arguing with a dedicated editor — step up to **the-team**, which runs the same standard across three agents in parallel. For drafting in the user's voice in the first place, run `/kevin-brand-voice` before this loop.

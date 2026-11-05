@@ -15,9 +15,9 @@ This skill matches analyze-video in every step except naming. Folder and file na
 ## Fixed settings
  
 - Terminal: PowerShell. Use PowerShell syntax in every command block.
-- Root folder: `C:\Users\pledger2\OneDrive - LLNL\Claude\video-analysis`
-- Saves folder: `C:\Users\pledger2\OneDrive - LLNL\Claude\video-analysis\_yt-dlp_saves`. Holds the downloaded MP4 and VTT, named by the cleaned title.
-- Project folder: `C:\Users\pledger2\OneDrive - LLNL\Claude\video-analysis\STEM`, where STEM is the saved file name without its extension, for example `Geometric Mean Annual Rate of Return (YouTube v-1uYe_w_rcvk)`. Holds `frames\`, `sheets\`, the transcript (`.en.vtt`), and `writeup.md`.
+- Root folder: `D:\claude-cowork-projects\Video Analysis`
+- Saves folder: `D:\claude-cowork-projects\Video Analysis\_yt-dlp_saves`. Holds the downloaded MP4 and VTT, named by the cleaned title.
+- Project folder: `D:\claude-cowork-projects\Video Analysis\STEM`, where STEM is the saved file name without its extension, for example `Geometric Mean Annual Rate of Return (YouTube v-1uYe_w_rcvk)`. Holds `frames\`, `sheets\`, the transcript (`.en.vtt`), and `writeup.md`.
 - Frames: one per second, in `STEM\frames\`. `f_00001.jpg` is second 0, `f_00002.jpg` is second 1, and so on.
 - Contact sheets: 20 frames each (5 across, 4 down), in `STEM\sheets\`. `sheet_001.jpg` covers seconds 0 to 19, `sheet_002.jpg` covers seconds 20 to 39, and so on. Tell Kevin the range for each sheet when you read it.
 - Quote every Windows path, because folder names contain spaces and parentheses.
@@ -34,7 +34,7 @@ Existing folders created under the old naming are not renamed automatically. Ask
  
 ## Step 0: Start
  
-Before asking anything, check that the device link can read `C:\Users\pledger2\OneDrive - LLNL\Claude\video-analysis`. If it can't, stop and tell Kevin that Filesystem access to that folder isn't active in this session, and that a new session may be needed after the permission change. Do not continue until the folder is readable.
+Before asking anything, check that the device link can read `D:\claude-cowork-projects\Video Analysis`. If it can't, stop and tell Kevin that Filesystem access to that folder isn't active in this session, and that a new session may be needed after the permission change. Do not continue until the folder is readable.
  
 Then ask with AskUserQuestion:
  
@@ -62,8 +62,8 @@ Replace `VIDEO_URL` with the URL. Ask him to paste the printed line and check it
 Tell Kevin to run these two commands in PowerShell:
  
 ```
-yt-dlp --js-runtimes node -f "bv*[height<=1080]+ba/b" --merge-output-format mp4 --windows-filenames --replace-in-metadata title "[.,:;\-\u2013\u2014]" "" --replace-in-metadata title "\s{2,}" " " -o "C:\Users\pledger2\OneDrive - LLNL\Claude\video-analysis\_yt-dlp_saves\%(title)s (YouTube v-%(id)s).%(ext)s" "VIDEO_URL"
-yt-dlp --js-runtimes node --skip-download --write-auto-subs --sub-langs en --windows-filenames --replace-in-metadata title "[.,:;\-\u2013\u2014]" "" --replace-in-metadata title "\s{2,}" " " -o "C:\Users\pledger2\OneDrive - LLNL\Claude\video-analysis\_yt-dlp_saves\%(title)s (YouTube v-%(id)s).%(ext)s" "VIDEO_URL"
+yt-dlp --js-runtimes node -f "bv*[height<=1080]+ba/b" --merge-output-format mp4 --windows-filenames --replace-in-metadata title "[.,:;\-\u2013\u2014]" "" --replace-in-metadata title "\s{2,}" " " -o "D:\claude-cowork-projects\Video Analysis\_yt-dlp_saves\%(title)s (YouTube v-%(id)s).%(ext)s" "VIDEO_URL"
+yt-dlp --js-runtimes node --skip-download --write-auto-subs --sub-langs en --windows-filenames --replace-in-metadata title "[.,:;\-\u2013\u2014]" "" --replace-in-metadata title "\s{2,}" " " -o "D:\claude-cowork-projects\Video Analysis\_yt-dlp_saves\%(title)s (YouTube v-%(id)s).%(ext)s" "VIDEO_URL"
 ```
  
 The `--js-runtimes node` flag is required on this machine. Without it, yt-dlp warns that no JavaScript runtime was found and may drop formats. If that warning returns, ask Kevin to run `node --version` to confirm Node.js is installed. The `--merge-output-format mp4` flag asks for an MP4, so Step 4 has a predictable input.
@@ -75,7 +75,7 @@ Ask him to reply "Done" when both finish, and to paste any error text. Do not gu
 Tell Kevin to run this and paste the output:
  
 ```
-dir "C:\Users\pledger2\OneDrive - LLNL\Claude\video-analysis\_yt-dlp_saves"
+dir "D:\claude-cowork-projects\Video Analysis\_yt-dlp_saves"
 ```
  
 Check the listing for `STEM.mp4`. The MP4 must have that exact name. If the extension is `.webm` or the name differs from Step 2, stop and show Kevin the difference. Do not continue until the names match. For his own videos, check that the file he named is there.
@@ -83,9 +83,9 @@ Check the listing for `STEM.mp4`. The MP4 must have that exact name. If the exte
 ## Step 5: Make the project folders and move the transcript
  
 ```
-New-Item -ItemType Directory -Force -Path "C:\Users\pledger2\OneDrive - LLNL\Claude\video-analysis\STEM\frames"
-New-Item -ItemType Directory -Force -Path "C:\Users\pledger2\OneDrive - LLNL\Claude\video-analysis\STEM\sheets"
-Move-Item "C:\Users\pledger2\OneDrive - LLNL\Claude\video-analysis\_yt-dlp_saves\STEM.en.vtt" "C:\Users\pledger2\OneDrive - LLNL\Claude\video-analysis\STEM\"
+New-Item -ItemType Directory -Force -Path "D:\claude-cowork-projects\Video Analysis\STEM\frames"
+New-Item -ItemType Directory -Force -Path "D:\claude-cowork-projects\Video Analysis\STEM\sheets"
+Move-Item "D:\claude-cowork-projects\Video Analysis\_yt-dlp_saves\STEM.en.vtt" "D:\claude-cowork-projects\Video Analysis\STEM\"
 ```
  
 If the VTT is missing from the saves folder because it was already moved, that's fine. Confirm it is in the project folder instead. Wait for "Done."
@@ -93,7 +93,7 @@ If the VTT is missing from the saves folder because it was already moved, that's
 ## Step 6: Extract one frame per second
  
 ```
-ffmpeg -i "C:\Users\pledger2\OneDrive - LLNL\Claude\video-analysis\_yt-dlp_saves\STEM.mp4" -vf fps=1 "C:\Users\pledger2\OneDrive - LLNL\Claude\video-analysis\STEM\frames\f_%05d.jpg"
+ffmpeg -i "D:\claude-cowork-projects\Video Analysis\_yt-dlp_saves\STEM.mp4" -vf fps=1 "D:\claude-cowork-projects\Video Analysis\STEM\frames\f_%05d.jpg"
 ```
  
 Wait for "Done." If ffmpeg reports an error, ask Kevin to paste it.
@@ -101,14 +101,14 @@ Wait for "Done." If ffmpeg reports an error, ask Kevin to paste it.
 ## Step 7: Build the contact sheets
  
 ```
-ffmpeg -i "C:\Users\pledger2\OneDrive - LLNL\Claude\video-analysis\STEM\frames\f_%05d.jpg" -vf "scale=320:-1,tile=5x4" "C:\Users\pledger2\OneDrive - LLNL\Claude\video-analysis\STEM\sheets\sheet_%03d.jpg"
+ffmpeg -i "D:\claude-cowork-projects\Video Analysis\STEM\frames\f_%05d.jpg" -vf "scale=320:-1,tile=5x4" "D:\claude-cowork-projects\Video Analysis\STEM\sheets\sheet_%03d.jpg"
 ```
  
 Wait for "Done." Then ask Kevin to read the `sheets` folder listing back, or read it through the device link. Tell him how many sheets there are and how much video that covers (each sheet is 20 seconds).
  
 ## Step 8: Read the sheets
  
-Read each sheet through the device link (`read_media_file` on `C:\Users\pledger2\OneDrive - LLNL\Claude\video-analysis\STEM\sheets\sheet_001.jpg`). Read the transcript from `C:\Users\pledger2\OneDrive - LLNL\Claude\video-analysis\STEM\STEM.en.vtt` with `read_text_file`. Start with `sheet_001.jpg`. For each sheet:
+Read each sheet through the device link (`read_media_file` on `D:\claude-cowork-projects\Video Analysis\STEM\sheets\sheet_001.jpg`). Read the transcript from `D:\claude-cowork-projects\Video Analysis\STEM\STEM.en.vtt` with `read_text_file`. Start with `sheet_001.jpg`. For each sheet:
  
 - Note the time range it covers.
 - Note the layout, text on screen, palette, and type.
@@ -123,7 +123,7 @@ Once all sheets are reviewed, produce:
 2. **Timeline**: one line per sheet, with the time range, what is said, and what is shown.
 3. **Findings**, grouped as Consistency (visuals against narration), Aesthetics (palette, type, contrast, readability), and Pacing. Each finding has a timestamp and a one-line fix.
 4. **Not verified**: anything the sheets could not show. Contact sheets are 320 pixels wide, so small on-screen text may be unreadable. Say so when it matters.
-Save the write-up as `C:\Users\pledger2\OneDrive - LLNL\Claude\video-analysis\STEM\writeup.md`. If the device link can't write there, give Kevin the text and ask him to save it into the project folder.
+Save the write-up as `D:\claude-cowork-projects\Video Analysis\STEM\writeup.md`. If the device link can't write there, give Kevin the text and ask him to save it into the project folder.
  
 If the video is Kevin's own, check the findings against his brand voice rules, and use the `kevin-brand-voice` skill for copy changes.
  

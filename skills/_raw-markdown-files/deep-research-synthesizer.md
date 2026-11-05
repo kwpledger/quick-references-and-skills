@@ -2,6 +2,7 @@
 name: deep-research-synthesizer
 description: >
     Synthesize a pile of mixed source material (internal docs, reports, SME notes, standards, data, web sources) into a decision brief with ranked findings, defined confidence levels, traced provenance, and recommended next steps. Use when the user wants to know what a set of sources adds up to and what to do about it, e.g. "synthesize these reports", "what do these docs tell us", "pull this together into a brief", "what's the bottom line across these sources", "summarize the evidence for this decision". Not for academic literature reviews or thesis gap-finding (use evidence-synthesis for that).
+license: Complete terms in LICENSE.txt
 ---
 
 # Deep Research Synthesizer
@@ -106,9 +107,9 @@ Sections in this order:
 
 1. **Bottom line** (2 to 4 sentences): the answer to the decision question, with overall confidence.
 2. **Key findings**, ranked by decision impact. Each one gets:
-   - ID, the finding, the confidence rating with independent-source count
-   - Source IDs
-   - So-what
+    - ID, the finding, the confidence rating with independent-source count
+    - Source IDs
+    - So-what
 3. **Where sources disagree:** what the disagreement is about (facts, scope, definitions, or interests), and whether it can be resolved.
 4. **Fragile ground:** circular reporting, single-source or interested-party-only claims, stale sources, and claims no source tested.
 5. **What would change the call:** from Step 7.

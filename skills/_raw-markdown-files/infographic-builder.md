@@ -15,6 +15,7 @@ Transforms textual content into one finished infographic image: a 1080×1350 px 
 ## What "great" means here
 
 An infographic is not "text with boxes around it." It is a designed argument. Before anything else, decide what makes this one good:
+
 - **One controlling idea.** State the single question the graphic answers or the single claim it makes. If you can't say it in one sentence, the infographic will be a list, not a graphic. Everything on the canvas must serve that idea.
 - **Three readable levels.** (1) The 2-second takeaway — the title or hero number a scroller absorbs without stopping. (2) The 10-second skim — section headers and labels. (3) The detail — read only if interested. Bad infographics flatten everything to one level; great ones are legible at all three.
 - **A deliberate reading path.** Decide how the eye moves: single column top-to-bottom, numbered steps, a 2-column grid, or hub-and-spoke. The layout guides the eye on purpose — it never just tiles content to fill space.
@@ -31,6 +32,7 @@ An infographic is not "text with boxes around it." It is a designed argument. Be
 ## Visual approach (light touch — principles, not rules)
 
 Use judgment; these are guardrails, not a rigid spec.
+
 - **Color carries meaning, not decoration.** Pick one accent color plus neutrals. Reserve red/green/amber for genuinely negative/positive/cautionary content. A two-color graphic reads cleaner than a rainbow.
 - **Establish a type scale.** A clear jump between the hero element, section headers, and body — three or four sizes, used consistently. Don't size text ad hoc.
 - **Align to an implied grid** and give content room — generous margins and whitespace make it look designed rather than crammed. Reserve a comfortable margin (≈64–80 px) around the canvas edge.

@@ -12,9 +12,10 @@ Runs a buy-vs-build-vs-skip check before any architecture talk, because feasibil
 
 ## Steps (in order)
 
+0. Mode check — if Kevin says he's only ideating or "just thinking out loud," run a partial triage: note any objections in a line or two, then help him get the idea written down. The objections go into the saved notes alongside the idea (TickTick or wherever he's capturing it), not just the chat, so they're there when he comes back.
 1. Existing-tool check — because the PWA to-do app died when TickTick turned out to already do everything it would have done.
-2. Identify the single riskiest assumption and the smallest time-boxed spike that tests it — because the OneNote MCP consumed hours before revealing it could only list_notebooks.
-3. Opportunity-cost check against standing goals (YouTube channel before October 2027 is the named one) — because every side build displaces something.
+2. Identify the single riskiest assumption and the smallest time-boxed spike that tests it — because the OneNote MCP fork consumed hours of debugging before revealing it could only `list_notebooks`. (Every other tool was a generic stub that would have required building from scratch.)
+3. Opportunity-cost check against what Kevin is actually working on now. Do not cite dated goals from memory: his plans are generally undated except for true deadlines. If a deadline matters to the verdict, check TickTick or ask before naming it.
 4. Only after 1–3: architecture, stack, and how-to.
 
 ## Format & output
@@ -30,6 +31,7 @@ Verdict first, one paragraph. Then the reasoning. No tech-stack enthusiasm befor
 
 - Never open with "yes, this is feasible" — everything is feasible.
 - Never skip step 1 because the idea is technically interesting.
+- Never invent or recall a goal date to make the opportunity-cost point.
 
 ## Examples
 
@@ -41,4 +43,4 @@ Verdict first, one paragraph. Then the reasoning. No tech-stack enthusiasm befor
 
 ## When unsure
 
-Ask: "What job does this do that nothing you already own does?"\
+Ask: "What job does this do that nothing you already own does?"
